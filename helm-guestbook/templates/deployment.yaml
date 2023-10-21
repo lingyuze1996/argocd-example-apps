@@ -20,7 +20,7 @@ spec:
         app: {{ template "helm-guestbook.name" . }}
         release: {{ .Release.Name }}
     spec:
-      # serviceAccountName: {{$.Values.serviceAccountName}}
+      serviceAccountName: default
       revisionHistoryLimit: 0
       containers:
         - name: {{ .Chart.Name }}-t
